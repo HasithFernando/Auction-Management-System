@@ -136,3 +136,14 @@ Before running the application, you need to set up the database using Entity Fra
     ```
 
     The frontend should be running at `http://localhost:3000`.
+
+## Group Members
+
+| Name                       | GitHub Profile                                                  |
+|----------------------------|-----------------------------------------------------------------|
+| [Hasith Fernando](https://github.com/HasithFernando)                   | ![View Profile](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github) |
+| [Hiruni Chathurya](https://github.com/HiruniChathurya)                 | ![View Profile](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github) |
+| [Akshaya Kannan](https://github.com/Akshayaakannan)                    | ![View Profile](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github) |
+| [Sithum Yugantha](https://github.com/Yugantha02)                       | ![View Profile](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github) |
+| [Sadeesha Jayaweera](https://github.com/SadeeshaJayaweera)             | ![View Profile](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github) |
+| [Thuvaragan Gobalakrishnan](https://github.com/gthuva)                 | ![View Profile](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github) |
