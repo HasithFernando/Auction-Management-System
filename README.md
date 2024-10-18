@@ -33,7 +33,7 @@ Before running this application locally, ensure you have the following installed
 1. **Clone the repository**
 
     ```bash
-    git clone https://github.com/your-username/auction-management-system.git
+    git clone https://github.com/HasithFernando/Auction-Management-System.git
     cd auction-management-system
     ```
 
