@@ -137,13 +137,11 @@ Before running the application, you need to set up the database using Entity Fra
 
     The frontend should be running at `http://localhost:3000`.
 
-## Group Members
+### Group Members
 
-| Name                       | GitHub Profile                                                  |
-|----------------------------|-----------------------------------------------------------------|
-| [Hasith Fernando](https://github.com/HasithFernando)                   | ![View Profile](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github) |
-| [Hiruni Chathurya](https://github.com/HiruniChathurya)                 | ![View Profile](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github) |
-| [Akshaya Kannan](https://github.com/Akshayaakannan)                    | ![View Profile](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github) |
-| [Sithum Yugantha](https://github.com/Yugantha02)                       | ![View Profile](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github) |
-| [Sadeesha Jayaweera](https://github.com/SadeeshaJayaweera)             | ![View Profile](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github) |
-| [Thuvaragan Gobalakrishnan](https://github.com/gthuva)                 | ![View Profile](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github) |
+   [![Hasith Fernando](https://img.shields.io/badge/Hasith%20Fernando-Click%20to%20View-2ea44f?style=for-the-badge&logo=github)](https://github.com/HasithFernando)
+   [![Hiruni Chathurya](https://img.shields.io/badge/Hiruni%20Chathurya-Click%20to%20View-2ea44f?style=for-the-badge&logo=github)](https://github.com/HiruniChathurya)
+   [![Akshaya Kannan](https://img.shields.io/badge/Akshaya%20Kannan-Click%20to%20View-2ea44f?style=for-the-badge&logo=github)](https://github.com/Akshayaakannan)
+   [![Sithum Yugantha](https://img.shields.io/badge/Sithum%20Yugantha-Click%20to%20View-2ea44f?style=for-the-badge&logo=github)](https://github.com/Yugantha02)
+   [![Sadeesha Jayaweera](https://img.shields.io/badge/Sadeesha%20Jayaweera-Click%20to%20View-2ea44f?style=for-the-badge&logo=github)](https://github.com/SadeeshaJayaweera)
+   [![Thuvaragan Gobalakrishnan](https://img.shields.io/badge/Thuvaragan%20Gobalakrishnan-Click%20to%20View-2ea44f?style=for-the-badge&logo=github)](https://github.com/gthuva)
