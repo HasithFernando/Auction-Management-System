@@ -71,6 +71,50 @@ Before running this application locally, ensure you have the following installed
     }
     ```
 
+## Database Setup and Migrations
+
+Before running the application, you need to set up the database using Entity Framework Core migrations. Follow these steps to create and apply migrations.
+
+1. **Create a Migration**
+
+    If any changes have been made to the models, you will need to create a migration. In the `Backend` folder, open a terminal and run:
+
+    ```bash
+    dotnet ef migrations add InitialCreate
+    ```
+
+    This will scaffold a new migration based on your current model definitions.
+
+2. **Apply Migrations to the Database**
+
+    After creating the migration, you can apply it to the SQL Server database by running:
+
+    ```bash
+    dotnet ef database update
+    ```
+
+    This command will create or update the database schema based on the current migration files.
+
+3. **Check Migration Status**
+
+    If you want to verify which migrations have been applied, run:
+
+    ```bash
+    dotnet ef migrations list
+    ```
+
+    This will list all migrations, showing which ones have been applied and which are still pending.
+
+4. **Rolling Back a Migration**
+
+    If you need to undo the last migration, you can run:
+
+    ```bash
+    dotnet ef database update PreviousMigrationName
+    ```
+
+    This will revert the database to the state before the most recent migration.
+
 ## Running the Application
 
 1. **Run the Backend (.NET API)**
@@ -91,4 +135,4 @@ Before running this application locally, ensure you have the following installed
     npm start
     ```
 
-    The frontend should be running at [http://localhost:3000](http://localhost:3000).
+    The frontend should be running at `http://localhost:3000`.
