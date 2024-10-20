@@ -16,6 +16,19 @@ public class AuctionDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
+        modelBuilder.Entity<User>().HasData(
+            new User
+            {
+                UserID = 1,
+                Username = "Admin",
+                Email = "admin@example.com",
+                PasswordHash = "$2a$11$Lyg3t.HXsZM7XuQYZdcyc.I88D.5HSqWBdKmxDEsNEVwbInT5JPBe",
+                Role = "Admin",
+                CreatedAt = DateTime.Now,
+                UpdatedAt = DateTime.Now
+            }
+        );
+
         modelBuilder.Entity<Auction>(entity =>
         {
             entity.HasKey(e => e.AuctionID);
