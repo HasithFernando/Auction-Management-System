@@ -89,7 +89,7 @@ const AuctionProfilePage = () => {
                         <Card.Body>
                         <div className="d-flex justify-content-between align-items-center mb-4">
                             <h3>Your Auction Items</h3>
-                            <button className="btn btn-primary">Add Auction</button>
+                            <a href="/AddAuction"><button className="btn btn-primary">Add Auction</button></a>
                         </div>
                             <Table striped bordered hover responsive className="mt-4">
                                 <thead className="bg-light">
