@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, Button, Table, Form, Spinner } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Table, Spinner } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const AuctionProfilePage = () => {
     const [profile, setProfile] = useState(null);
-    const [isEditing, setIsEditing] = useState(false);
-    const [profilePicture, setProfilePicture] = useState(null);
-    const [paymentDetails, setPaymentDetails] = useState('');
     const navigate = useNavigate(); // Hook for navigation
 
     useEffect(() => {
@@ -19,55 +16,29 @@ const AuctionProfilePage = () => {
                         'Content-Type': 'application/json',
                     },
                 });
-
-                if (!response.ok) {
+    
+                if (response.ok) {
+                    const profileData = await response.json();
+                    setProfile(profileData); // Set profile data here
+                } else {
                     const errorText = await response.text();
                     console.error('Error response body:', errorText);
-                    return;
                 }
-                
-                const data = await response.json();
-                setProfile(data);
-                setPaymentDetails(data.paymentDetails || ''); // Pre-fill payment details with fallback
             } catch (error) {
                 console.error('Error fetching profile:', error);
             }
         };
-
+    
         fetchProfile();
     }, []); // Run only on mount
+    
 
-    const handleSaveProfile = async () => {
-        setIsEditing(false);
-        try {
-            const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:5229/api/auth/updateProfile', {
-                method: 'PUT',
-                headers: {
-                    'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ paymentDetails, profilePicture }),
-            });
-
-            if (!response.ok) {
-                console.error('Error updating profile');
-            }
-            const updatedProfile = await response.json();
-            setProfile(updatedProfile); // Update profile state with new data
-        } catch (error) {
-            console.error('Error updating profile:', error);
-        }
-    };
 
     const handleLogout = () => {
         localStorage.removeItem('token');
         navigate('/LoginPage');
     };
 
-    const handleFileChange = (e) => {
-        setProfilePicture(e.target.files[0]);
-    };
 
     if (!profile) {
         return <Spinner animation="border" variant="primary" />; // Loading spinner while fetching data
@@ -90,47 +61,14 @@ const AuctionProfilePage = () => {
                                     style={{ padding: '10px', borderColor: '#ddd', borderWidth: '2px' }}
                                 />
                             </div>
-                            {isEditing ? (
-                                <Form.Group controlId="formFile" className="mb-3">
-                                    <Form.Label>Change Profile Picture</Form.Label>
-                                    <Form.Control type="file" onChange={handleFileChange} />
-                                </Form.Group>
-                            ) : (
-                                <Button onClick={() => setIsEditing(true)} variant="outline-primary" className="mb-3">
-                                    Edit Profile
-                                </Button>
-                            )}
-
+                            
                             <h5>Username</h5>
                             <p>{profile.username}</p>
 
                             <h5>Email</h5>
                             <p>{profile.email}</p>
 
-                            {isEditing ? (
-                                <Form.Group controlId="formPaymentDetails" className="mb-3">
-                                    <Form.Label>Payment Details</Form.Label>
-                                    <Form.Control
-                                        type="text"
-                                        placeholder="Enter payment details"
-                                        value={paymentDetails}
-                                        onChange={(e) => setPaymentDetails(e.target.value)}
-                                    />
-                                </Form.Group>
-                            ) : (
-                                <>
-                                    <h5>Payment Details</h5>
-                                    <p>{profile.paymentDetails || 'No details available'}</p>
-                                </>
-                            )}
-
-                            {isEditing && (
-                                <Button variant="success" onClick={handleSaveProfile} className="mt-2">
-                                    Save Profile
-                                </Button>
-                            )}
-
-                            {profile.username === "Admin" && (
+                            {profile.role == "Admin" && (
                                 <a href="/AdminDashboard"><Button variant="primary" className="mt-2 mx-2">
                                     Admin Dashboard
                                     </Button></a>
@@ -146,9 +84,13 @@ const AuctionProfilePage = () => {
                 </Col>
 
                 <Col md={8}>
+                {profile.role == "Seller" && (
                     <Card className="shadow-lg mb-4">
                         <Card.Body>
-                            <h3 className="mb-4">Your Auction Items</h3>
+                        <div className="d-flex justify-content-between align-items-center mb-4">
+                            <h3>Your Auction Items</h3>
+                            <button className="btn btn-primary">Add Auction</button>
+                        </div>
                             <Table striped bordered hover responsive className="mt-4">
                                 <thead className="bg-light">
                                     <tr>
@@ -161,13 +103,13 @@ const AuctionProfilePage = () => {
                                 </thead>
                                 <tbody>
                                     {profile.auctionItems?.length > 0 ? (
-                                        profile.auctionItems.map((item, index) => (
+                                        profile.auctionItems.map((Auction, index) => (
                                             <tr key={index}>
                                                 <td>{index + 1}</td>
-                                                <td>{item.itemName}</td>
-                                                <td>{item.bidCount}</td>
-                                                <td>{item.highestBid}</td>
-                                                <td>{item.auctionEnd}</td>
+                                                <td>{Auction.title}</td>
+                                                <td>{Auction.bidCount}</td>
+                                                <td>{Auction.highestBid}</td>
+                                                <td>{Auction.endTime}</td>
                                             </tr>
                                         ))
                                     ) : (
@@ -179,6 +121,8 @@ const AuctionProfilePage = () => {
                             </Table>
                         </Card.Body>
                     </Card>
+                )}
+
 
                     <Card className="shadow-lg">
                         <Card.Body>

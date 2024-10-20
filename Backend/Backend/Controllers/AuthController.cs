@@ -117,16 +117,32 @@ public class AuthController : ControllerBase
             return NotFound();
         }
 
-        var bids = await _context.Bids.Where(b => b.BidderID == userId).ToListAsync();
-        var auctions = await _context.Auctions.Where(a => a.SellerID == userId).ToListAsync();
+        var bids = await _context.Bids.Where(b => b.BidderID == userId).GroupBy(b => b.AuctionID).Select(g => new
+        {
+            AuctionID = g.Key,
+            ItemName = _context.Auctions.Where(a => a.AuctionID == g.Key).Select(a => a.Title).FirstOrDefault(),
+            YourBid = g.OrderByDescending(b => b.BidAmount).FirstOrDefault().BidAmount, // Your highest bid
+            Status = "Active", // Or any relevant status logic
+            AuctionEnd = _context.Auctions.Where(a => a.AuctionID == g.Key).Select(a => a.EndTime).FirstOrDefault() // Auction end time
+        }).ToListAsync();
+
+        var auctions = await _context.Auctions.Where(a => a.SellerID == userId).Select(a => new
+         {
+                AuctionID = a.AuctionID,
+                Title = a.Title,
+                // You can calculate bidCount and highestBid here
+                BidCount = _context.Bids.Count(b => b.AuctionID == a.AuctionID),
+                HighestBid = _context.Bids.Where(b => b.AuctionID == a.AuctionID).OrderByDescending(b => b.BidAmount).Select(b => b.BidAmount).FirstOrDefault(),
+                EndTime = a.EndTime
+            }).ToListAsync();
 
         return Ok(new
         {
             user.Username,
             user.Email,
             user.Role,
-            Auctions = auctions,
-            Bids = bids
+            auctionItems = auctions,
+            bidHistory = bids
         });
     }
 }

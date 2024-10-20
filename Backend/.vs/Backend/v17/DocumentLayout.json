@@ -1,7 +1,11 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\hasit\\Downloads\\auction-management-system\\Backend\\",
+  "WorkspaceRootPath": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\",
   "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|c:\\users\\hasit\\downloads\\auction-management-system\\backend\\backend\\controllers\\auctioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\auctioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
     {
       "AbsoluteMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|c:\\users\\hasit\\downloads\\auction-management-system\\backend\\backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -43,67 +47,76 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AuctionController.cs",
+              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Controllers\\AuctionController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\AuctionController.cs",
+              "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Controllers\\AuctionController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\AuctionController.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAYwAcAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T03:43:26.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\auction-management-system\\Backend\\Backend\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\hasit\\Downloads\\auction-management-system\\Backend\\Backend\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Backend\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAuwFsAAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHwAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-18T07:46:16.005Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\auction-management-system\\Backend\\Backend\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Program.cs",
               "RelativeDocumentMoniker": "Backend\\Program.cs",
-              "ToolTip": "C:\\Users\\hasit\\Downloads\\auction-management-system\\Backend\\Backend\\Program.cs",
+              "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Program.cs",
               "RelativeToolTip": "Backend\\Program.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAACEAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T05:27:57.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\auction-management-system\\Backend\\Backend\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "Backend\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\hasit\\Downloads\\auction-management-system\\Backend\\Backend\\appsettings.Development.json",
-              "RelativeToolTip": "Backend\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-18T05:24:34.362Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T05:27:57.217Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AuctionDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\auction-management-system\\Backend\\Backend\\Data\\AuctionDbContext.cs",
-              "RelativeDocumentMoniker": "Backend\\Data\\AuctionDbContext.cs",
-              "ToolTip": "C:\\Users\\hasit\\Downloads\\auction-management-system\\Backend\\Backend\\Data\\AuctionDbContext.cs",
-              "RelativeToolTip": "Backend\\Data\\AuctionDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T05:09:29.935Z",
-              "EditorCaption": ""
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Backend\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\appsettings.Development.json",
+              "RelativeToolTip": "Backend\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-18T05:24:34.362Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "AuctionDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Data\\AuctionDbContext.cs",
+              "RelativeDocumentMoniker": "Backend\\Data\\AuctionDbContext.cs",
+              "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Data\\AuctionDbContext.cs",
+              "RelativeToolTip": "Backend\\Data\\AuctionDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T05:09:29.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\auction-management-system\\Backend\\Backend\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\appsettings.json",
               "RelativeDocumentMoniker": "Backend\\appsettings.json",
-              "ToolTip": "C:\\Users\\hasit\\Downloads\\auction-management-system\\Backend\\Backend\\appsettings.json",
+              "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\appsettings.json",
               "RelativeToolTip": "Backend\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-18T05:06:47.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T05:06:47.078Z"
             }
           ]
         }
