@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import './AuctionCard.css';
+import '../styles/AuctionCard.css';
 
 const AuctionCard = ({ id, title, description, imageUrl, startBid, endTime }) => {
   const formattedBid = startBid !== null && startBid !== undefined ? `$${startBid}` : 'N/A';

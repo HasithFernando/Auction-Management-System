@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.hero {
+    background: url('https://taylorwells.com.au/wp-content/uploads/2020/03/auction-1024x440.png') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background: #ff9900;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.featured-auctions{
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.featured-auctions h2, .how-it-works h2, .testimonials h2, .contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.how-it-works {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+}
+
+.how-it-works .section-title h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.how-it-works .container .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.how-it-works .container .row .col-md-3 {
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    height: 250px;
+    flex: 1 1 200px;
+}
+
+.how-it-works .container .row .col-md-3:hover {
+    transform: scale(1.05);
+}
+
+.how-it-works .col-md-3 h4 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.how-it-works .col-md-3 p {
+    font-size: 16px;
+    color: #777;
+    text-align: center;
+    height: 40%;
+}
+
+.how-it-works .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.how-it-works .col-md-3:nth-child(1) {
+    background-color: #e3f2fd;
+}
+
+.how-it-works .col-md-3:nth-child(2) {
+    background-color: #ffebee;
+}
+
+.how-it-works .col-md-3:nth-child(3) {
+    background-color: #e8f5e9;
+}
+
+.how-it-works .col-md-3:nth-child(4) {
+    background-color: #fff3e0;
+}
+
+.seller-section {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+}
+
+.seller-section .section-title h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.seller-section .container .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.seller-section .container .row .col-md-4 {
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    height: 250px;
+    flex: 1 1 200px;
+}
+
+.seller-section .container .row .col-md-4:hover {
+    transform: scale(1.05);
+}
+
+.seller-section .col-md-4 h4 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.seller-section .col-md-4 p {
+    font-size: 16px;
+    color: #777;
+    text-align: center;
+    height: 50%;
+}
+
+.seller-section .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
