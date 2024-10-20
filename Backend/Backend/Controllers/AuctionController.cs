@@ -51,15 +51,30 @@ namespace Backend.Controllers
 		[HttpGet("{id}")]
 		public async Task<ActionResult<Auction>> GetAuction(int id)
 		{
-			var auction = await _context.Auctions.FindAsync(id);
+            var auction = await _context.Auctions
+       .Where(a => a.AuctionID == id)
+       .Select(a => new
+       {
+           Auction = a,
+           HighestCurrentBid = _context.Bids
+               .Where(b => b.AuctionID == a.AuctionID)
+               .OrderByDescending(b => b.BidAmount)
+               .Select(b => b.BidAmount)
+               .FirstOrDefault() // Get the highest current bid
+       })
+       .FirstOrDefaultAsync();
 
-			if (auction == null)
-			{
-				return NotFound();
-			}
+            if (auction == null)
+            {
+                return NotFound();
+            }
 
-			return auction;
-		}
+            return Ok(new
+            {
+                Auction = auction.Auction,
+                HighestCurrentBid = auction.HighestCurrentBid
+            });
+        }
 
         [HttpPost("{id}/place")]
         [Authorize]

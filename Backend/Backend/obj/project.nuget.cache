@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9O/W6ffGimE=",
+  "dgSpecHash": "tDZPQjSgtRg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\hasit\\Downloads\\auction-management-system\\Backend\\Backend\\Backend.csproj",
+  "projectFilePath": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hasit\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\hasit\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
