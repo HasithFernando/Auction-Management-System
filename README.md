@@ -51,7 +51,7 @@ Before running this application locally, ensure you have the following installed
     Navigate to the `Backend` folder and restore NuGet packages:
 
     ```bash
-    cd Backend
+    cd Backend/Backend
     dotnet restore
     ```
 
