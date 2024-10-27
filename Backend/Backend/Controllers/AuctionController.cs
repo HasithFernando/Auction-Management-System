@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using Backend.DTOs;
 using Backend.Models;
 using System.Linq;
+using Backend.Services;
 
 namespace Backend.Controllers
 {
@@ -14,34 +15,44 @@ namespace Backend.Controllers
 	[Route("api/[controller]")]
 	public class AuctionController : ControllerBase
 	{
-		private readonly AuctionDbContext _context;
+        private readonly INotificationService _notificationService;
+        private readonly AuctionDbContext _context;
 
-		public AuctionController(AuctionDbContext context)
+		public AuctionController(INotificationService notificationService, AuctionDbContext context)
 		{
-			_context = context;
+            _notificationService = notificationService;
+            _context = context;
 		}
 
-		// POST: api/auction
-		[HttpPost]
-		public async Task<ActionResult<Auction>> PostAuction(Auction auction)
-		{
-			if (auction == null)
-			{
-				return BadRequest("Invalid auction data.");
-			}
+        // POST: api/auction
+        [HttpPost]
+        public async Task<ActionResult<Auction>> PostAuction(Auction auction)
+        {
+            if (auction == null)
+            {
+                return BadRequest("Invalid auction data.");
+            }
 
-			auction.CreatedAt = DateTime.UtcNow;
-			auction.UpdatedAt = DateTime.UtcNow;
+            // Get the SellerID from the authenticated user's claims
+            var sellerIdClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "UserID");
+            if (sellerIdClaim == null)
+            {
+                return Unauthorized("Seller ID not found.");
+            }
 
-			_context.Auctions.Add(auction);
-			await _context.SaveChangesAsync();
+            auction.SellerID = int.Parse(sellerIdClaim.Value);  // Assign the SellerID
+            auction.CreatedAt = DateTime.UtcNow;
+            auction.UpdatedAt = DateTime.UtcNow;
 
-			return CreatedAtAction(nameof(GetAuction), new { id = auction.AuctionID }, auction);
-		}
+            _context.Auctions.Add(auction);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetAuction), new { id = auction.AuctionID }, auction);
+        }
 
 
-		// GET: api/auction
-		[HttpGet]
+        // GET: api/auction
+        [HttpGet]
 		public async Task<ActionResult<IEnumerable<Auction>>> GetAuctions()
 		{
 			return await _context.Auctions.ToListAsync();
@@ -77,50 +88,59 @@ namespace Backend.Controllers
         }
 
         [HttpPost("{id}/place")]
-        [Authorize]
-        public async Task<ActionResult> PlaceBid(int id, [FromBody] BidDto bidDto)  // Add 'int id' here
+        public async Task<IActionResult> PlaceBid(int auctionId, [FromBody] BidDto bidDto)
         {
             try
             {
-                var userId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == "UserID").Value);
-
-                // Validate auction exists using id from route
-                var auction = await _context.Auctions.FindAsync(id);
+                // Get the auction from the database
+                var auction = await _context.Auctions.FindAsync(auctionId);
                 if (auction == null)
                 {
-                    return NotFound(new { message = "Auction not found" });
+                    return NotFound("Auction not found.");
                 }
 
-                // Check if the bid amount is higher than the current highest bid
+                // Get the current highest bid for the auction (if any)
                 var highestBid = await _context.Bids
-                    .Where(b => b.AuctionID == id)  // Compare with id from route
+                    .Where(b => b.AuctionID == auctionId)
                     .OrderByDescending(b => b.BidAmount)
                     .FirstOrDefaultAsync();
 
-                if (highestBid != null && bidDto.BidAmount <= highestBid.BidAmount)
+                // Check if the new bid is higher
+                if (bidDto.BidAmount <= (highestBid?.BidAmount ?? 0))
                 {
-                    return BadRequest(new { message = "Bid must be higher than the current highest bid" });
+                    return BadRequest("Bid amount must be higher than the current highest bid.");
                 }
 
-                // Create the new bid
-                var newBid = new Backend.Models.Bid
+                // Create a new bid
+                var newBid = new Bid
                 {
-                    AuctionID = id,  // Use id from route
-                    BidderID = userId,
+                    AuctionID = auctionId,
+                    BidderID = bidDto.BidderID, // Use the BidderID from the DTO
                     BidAmount = bidDto.BidAmount,
-                    BidTime = DateTime.UtcNow
+                    BidTime = DateTime.Now
                 };
 
-                _context.Bids.Add(newBid);
+                // Add the new bid to the database
+                await _context.Bids.AddAsync(newBid);
                 await _context.SaveChangesAsync();
 
-                return Ok(new { message = "Bid placed successfully" });
+                // Notify the auction owner about the new bid
+                var auctionOwnerId = auction.SellerID;
+                var messageForOwner = $"A new higher bid of {bidDto.BidAmount} has been placed on your auction: {auction.Title}.";
+                await _notificationService.CreateNotification(auctionOwnerId, messageForOwner);
+
+                // Notify the previous highest bidder (if there is one)
+                if (highestBid != null && highestBid.BidderID != bidDto.BidderID) // Check if there is a previous highest bidder
+                {
+                    var messageForPreviousBidder = $"Your bid has been outbid on the auction: {auction.Title}.";
+                    await _notificationService.CreateNotification(highestBid.BidderID, messageForPreviousBidder);
+                }
+
+                return Ok(newBid);
             }
             catch (Exception ex)
             {
-                // Log detailed error
-                Console.WriteLine("Error placing bid: " + ex.Message);
-                return StatusCode(500, new { message = "An error occurred while placing the bid." });
+                return BadRequest(ex.Message);
             }
         }
 

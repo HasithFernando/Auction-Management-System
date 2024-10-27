@@ -68,7 +68,7 @@ const AuctionProfilePage = () => {
                             <h5>Email</h5>
                             <p>{profile.email}</p>
 
-                            {profile.role == "Admin" && (
+                            {profile.role === "Admin" && (
                                 <a href="/AdminDashboard"><Button variant="primary" className="mt-2 mx-2">
                                     Admin Dashboard
                                     </Button></a>
@@ -84,7 +84,7 @@ const AuctionProfilePage = () => {
                 </Col>
 
                 <Col md={8}>
-                {profile.role == "Seller" && (
+                {profile.role === "Seller" && (
                     <Card className="shadow-lg mb-4">
                         <Card.Body>
                         <div className="d-flex justify-content-between align-items-center mb-4">

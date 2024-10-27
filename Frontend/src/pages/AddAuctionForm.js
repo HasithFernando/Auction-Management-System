@@ -7,8 +7,7 @@ const AddAuctionForm = () => {
     imageUrl: '',
     startBid: '',
     startTime: '',
-    endTime: '',
-    sellerId: ''
+    endTime: ''
   });
 
   const handleChange = (e) => {
@@ -26,6 +25,8 @@ const AddAuctionForm = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          // Add authorization header if required by backend
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
         body: JSON.stringify(formData),
       });
@@ -39,8 +40,7 @@ const AddAuctionForm = () => {
           imageUrl: '',
           startBid: '',
           startTime: '',
-          endTime: '',
-          sellerId: ''
+          endTime: ''
         });
       } else {
         alert('Failed to add auction');
@@ -53,7 +53,7 @@ const AddAuctionForm = () => {
   return (
     <form onSubmit={handleSubmit} className="container mt-4 shadow p-3 mb-5 bg-white rounded" style={{ width: '100%', maxWidth: '700px' }}>
       <div className="mb-3">
-      <h3 className="text-center mb-4">Add Auction</h3>
+        <h3 className="text-center mb-4">Add Auction</h3>
         <label className="form-label">Title:</label>
         <input
           type="text"
@@ -112,17 +112,6 @@ const AddAuctionForm = () => {
           type="datetime-local"
           name="endTime"
           value={formData.endTime}
-          onChange={handleChange}
-          className="form-control"
-          required
-        />
-      </div>
-      <div className="mb-3">
-        <label className="form-label">Seller ID:</label>
-        <input
-          type="number"
-          name="sellerId"
-          value={formData.sellerId}
           onChange={handleChange}
           className="form-control"
           required

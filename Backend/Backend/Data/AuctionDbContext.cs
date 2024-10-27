@@ -6,6 +6,7 @@ public class AuctionDbContext : DbContext
     public DbSet<Bid> Bids { get; set; }
     public DbSet<Auction> Auctions { get; set; }
     public DbSet<User> Users { get; set; }
+    public DbSet<Notification> Notifications { get; set; }
 
     public AuctionDbContext(DbContextOptions<AuctionDbContext> options)
         : base(options)

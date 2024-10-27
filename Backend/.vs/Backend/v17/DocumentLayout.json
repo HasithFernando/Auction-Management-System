@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Migrations\\20241025130512_Initial Migration1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Backend\\Migrations\\20241025130512_Initial Migration1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|c:\\users\\hasit\\downloads\\auction-management-system\\backend\\backend\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|solutionrelative:backend\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|c:\\users\\hasit\\downloads\\auction-management-system\\backend\\backend\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|c:\\users\\hasit\\downloads\\auction-management-system\\backend\\backend\\dtos\\notificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|solutionrelative:backend\\dtos\\notificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|c:\\users\\hasit\\downloads\\auction-management-system\\backend\\backend\\controllers\\auctioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\auctioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|c:\\users\\hasit\\downloads\\auction-management-system\\backend\\backend\\dtos\\biddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|solutionrelative:backend\\dtos\\biddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|c:\\users\\hasit\\downloads\\auction-management-system\\backend\\backend\\services\\notoficationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|solutionrelative:backend\\services\\notoficationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|c:\\users\\hasit\\downloads\\auction-management-system\\backend\\backend\\data\\auctiondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|solutionrelative:backend\\data\\auctiondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|c:\\users\\hasit\\downloads\\auction-management-system\\backend\\backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,16 +43,12 @@
       "RelativeMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|c:\\users\\hasit\\downloads\\auction-management-system\\backend\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|solutionrelative:backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|c:\\users\\hasit\\downloads\\auction-management-system\\backend\\backend\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|c:\\users\\hasit\\downloads\\auction-management-system\\backend\\backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|solutionrelative:backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|c:\\users\\hasit\\downloads\\auction-management-system\\backend\\backend\\data\\auctiondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE01CFC7-ACD9-4425-9ECD-F45CF9F7A957}|Backend\\Backend.csproj|solutionrelative:backend\\data\\auctiondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,43 +71,149 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20241025130512_Initial Migration1.cs",
+              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Migrations\\20241025130512_Initial Migration1.cs",
+              "RelativeDocumentMoniker": "Backend\\Migrations\\20241025130512_Initial Migration1.cs",
+              "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Migrations\\20241025130512_Initial Migration1.cs",
+              "RelativeToolTip": "Backend\\Migrations\\20241025130512_Initial Migration1.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwCEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T13:05:13.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NotificationDto.cs",
+              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\DTOs\\NotificationDto.cs",
+              "RelativeDocumentMoniker": "Backend\\DTOs\\NotificationDto.cs",
+              "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\DTOs\\NotificationDto.cs",
+              "RelativeToolTip": "Backend\\DTOs\\NotificationDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T12:40:37.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\NotificationController.cs",
+              "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Controllers\\NotificationController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\NotificationController.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAYwBEAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T12:39:19.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BidDto.cs",
+              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\DTOs\\BidDto.cs",
+              "RelativeDocumentMoniker": "Backend\\DTOs\\BidDto.cs",
+              "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\DTOs\\BidDto.cs",
+              "RelativeToolTip": "Backend\\DTOs\\BidDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T12:32:47.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NotoficationService.cs",
+              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Services\\NotoficationService.cs",
+              "RelativeDocumentMoniker": "Backend\\Services\\NotoficationService.cs",
+              "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Services\\NotoficationService.cs",
+              "RelativeToolTip": "Backend\\Services\\NotoficationService.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAgwA0AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T12:25:40.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuctionDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Data\\AuctionDbContext.cs",
+              "RelativeDocumentMoniker": "Backend\\Data\\AuctionDbContext.cs",
+              "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Data\\AuctionDbContext.cs",
+              "RelativeToolTip": "Backend\\Data\\AuctionDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T12:20:07.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\Notification.cs",
+              "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Models\\Notification.cs",
+              "RelativeToolTip": "Backend\\Models\\Notification.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBYAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T12:17:20.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\PaymentController.cs",
+              "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\PaymentController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T10:41:43.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AuctionController.cs",
               "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Controllers\\AuctionController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\AuctionController.cs",
               "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Controllers\\AuctionController.cs",
               "RelativeToolTip": "Backend\\Controllers\\AuctionController.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAowEsAAAAPAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBQAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-20T03:43:26.768Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Backend\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHwAAAAMAAAA",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAswHwAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T07:46:16.005Z"
+              "WhenOpened": "2024-10-18T07:46:16.005Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Program.cs",
               "RelativeDocumentMoniker": "Backend\\Program.cs",
               "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Program.cs",
               "RelativeToolTip": "Backend\\Program.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACEAAAAaAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAABUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T05:27:57.217Z"
+              "WhenOpened": "2024-10-18T05:27:57.217Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Backend\\appsettings.Development.json",
@@ -91,31 +221,8 @@
               "RelativeToolTip": "Backend\\appsettings.Development.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-18T05:24:34.362Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuctionDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Data\\AuctionDbContext.cs",
-              "RelativeDocumentMoniker": "Backend\\Data\\AuctionDbContext.cs",
-              "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\Data\\AuctionDbContext.cs",
-              "RelativeToolTip": "Backend\\Data\\AuctionDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T05:09:29.935Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\appsettings.json",
-              "RelativeDocumentMoniker": "Backend\\appsettings.json",
-              "ToolTip": "C:\\Users\\hasit\\Downloads\\Auction-Management-System\\Backend\\Backend\\appsettings.json",
-              "RelativeToolTip": "Backend\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-18T05:06:47.078Z"
+              "WhenOpened": "2024-10-18T05:24:34.362Z",
+              "EditorCaption": ""
             }
           ]
         }

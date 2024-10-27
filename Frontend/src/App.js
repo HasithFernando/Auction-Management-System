@@ -15,6 +15,7 @@ import UserManagement from './components/AdminDashboard/UserManagement';
 import AuctionManagement from './components/AdminDashboard/AuctionManagement';
 import BidManagement from './components/AdminDashboard/BidManagement';
 import PaymentPage from './pages/PaymentPage'; // Import PaymentPage
+import Notifications from './pages/Notifications';
 
 const App = () => {
   return (
@@ -37,7 +38,8 @@ const App = () => {
           <Route path="/AdminAuctions" element={<AuctionManagement />} />
           <Route path="/AdminBids" element={<BidManagement />} />
           <Route path="/auctions/:id/bid" element={<BidInterface />} />
-          <Route path="/payment" element={<PaymentPage />} /> {/* Payment Route */}
+          <Route path="/payment" element={<PaymentPage />} /> 
+          <Route path="/Notifications" element={<Notifications />} />
         </Routes>
       </main>
 

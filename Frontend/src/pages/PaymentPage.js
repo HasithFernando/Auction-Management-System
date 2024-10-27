@@ -32,14 +32,39 @@ const CheckoutForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <CardElement />
-            <button type="submit" disabled={!stripe || isProcessing}>
-                {isProcessing ? 'Processing...' : 'Pay Now'}
-            </button>
-            {error && <div className="error">{error}</div>}
-            {success && <div className="success">Payment Successful!</div>}
-        </form>
+        <div className="container mt-5">
+            <div className="card mx-auto shadow-lg p-4" style={{ maxWidth: '500px' }} >
+                <h4 className="text-center mb-4">Secure Payment</h4>
+                <form onSubmit={handleSubmit}>
+                    <div className="form-group">
+                        <div className="border rounded p-3 mb-3" style={{ backgroundColor: '#f7f7f7' }} >
+                            <CardElement />
+                        </div>
+                    </div>
+
+      
+                <button
+                    type="submit"
+                    className="btn btn-primary btn-block"
+                    disabled={!stripe || isProcessing}
+                >
+                    {isProcessing ? 'Processing...' : 'Pay Now'}
+                </button>
+
+                {/* Error and success messages with Bootstrap alerts */}
+                {error && (
+                <div className="alert alert-danger mt-3" role="alert">
+                    {error}
+                </div>
+                )}
+                {success && (
+                    <div className="alert alert-success mt-3" role="alert">
+                        Payment Successful!
+                    </div>
+                )}
+            </form>
+            </div>
+</div>
     );
 };
 
