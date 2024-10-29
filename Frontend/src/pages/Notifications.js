@@ -42,7 +42,7 @@ const Notifications = () => {
     // Function to fetch notifications
     const fetchNotifications = async (userId) => {
         try {
-            const response = await fetch(`http://localhost:5229/api/notification/${userId}`);
+            const response = await fetch(`http://localhost:5229/api/Notification/${userId}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -78,32 +78,34 @@ const Notifications = () => {
 
     return (
         <div className="container mt-5">
-            <h2>Your Notifications</h2>
-            <div className="list-group">
-                {notifications.length === 0 ? (
-                    <div className="list-group-item">No notifications available.</div>
-                ) : (
-                    notifications.map(notification => (
-                        <div
-                            key={notification.notificationID}
-                            className={`list-group-item ${notification.isRead ? 'bg-light' : ''}`}
-                        >
-                            <h5 className="mb-1">{notification.messageContent}</h5>
-                            <small>{new Date(notification.sentAt).toLocaleString()}</small>
-                            {!notification.isRead && (
-                                <button
-                                    className="btn btn-sm btn-primary float-right mark-read"
-                                    onClick={() => markAsRead(notification.notificationID)}
-                                >
-                                    Mark as Read
-                                </button>
-                            )}
-                        </div>
-                    ))
-                )}
-            </div>
+          <h2>Your Notifications</h2>
+          <div className="list-group">
+            {notifications.length === 0 ? (
+              <div className="list-group-item text-center">No notifications available.</div>
+            ) : (
+              notifications.map(notification => (
+                <div
+                  key={notification.notificationID}
+                  className={`list-group-item ${notification.isRead ? 'bg-white my-2' : 'bg-light my-2'}` }
+                >
+                  <div className="d-flex w-100 justify-content-between">
+                    <h5 className="mb-1">{notification.messageContent}</h5>
+                    <small>{new Date(notification.sentAt).toLocaleString()}</small>
+                  </div>
+                  {!notification.isRead && (
+                    <button
+                      className="btn btn-sm btn-primary mt-2 float-right"
+                      onClick={() => markAsRead(notification.notificationID)}
+                    >
+                      Mark as Read
+                    </button>
+                  )}
+                </div>
+              ))
+            )}
+          </div>
         </div>
-    );
+      );
 };
 
 export default Notifications;

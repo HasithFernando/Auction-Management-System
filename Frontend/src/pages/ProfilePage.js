@@ -69,7 +69,7 @@ const AuctionProfilePage = () => {
                             <p>{profile.email}</p>
 
                             {profile.role === "Admin" && (
-                                <a href="/AdminDashboard"><Button variant="primary" className="mt-2 mx-2">
+                                <a href="/AdminDashboard"><Button variant="primary" className="mt-2 ">
                                     Admin Dashboard
                                     </Button></a>
                             )}
@@ -78,7 +78,16 @@ const AuctionProfilePage = () => {
                                 Logout
                             </Button>
 
-
+                            
+            <a href="/Notifications" className='mx-2'>
+                <img 
+                    src="https://icons.veryicon.com/png/o/miscellaneous/interface-2/notification-bell-ring-1.png" 
+                    alt="Notifications" 
+                    width="35" 
+                    height="35" 
+                    style={{ cursor: 'pointer' }} 
+                />
+            </a>
                         </Card.Body>
                     </Card>
                 </Col>

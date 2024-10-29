@@ -49,7 +49,7 @@ const BidInterface = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        auctionID: id,   // ensure this matches your backend DTO
+        auctionId: id,   // ensure this matches your backend DTO
         bidAmount: bidAmount,
       }),
     });

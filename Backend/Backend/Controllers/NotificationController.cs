@@ -54,7 +54,6 @@ namespace Backend.Controllers
         /// <param name="userId">User ID to filter notifications.</param>
         /// <returns>List of notifications.</returns>
         [HttpGet("{userId}")]
-        [Authorize]
         public async Task<ActionResult<IEnumerable<Notification>>> GetNotificationsForUser(int userId)
         {
             var notifications = await _context.Notifications
@@ -71,7 +70,6 @@ namespace Backend.Controllers
         /// <param name="id">Notification ID.</param>
         /// <returns>Action result.</returns>
         [HttpPut("{id}/mark-read")]
-        [Authorize]
         public async Task<IActionResult> MarkNotificationAsRead(int id)
         {
             var notification = await _context.Notifications.FindAsync(id);

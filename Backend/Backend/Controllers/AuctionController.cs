@@ -87,7 +87,7 @@ namespace Backend.Controllers
             });
         }
 
-        [HttpPost("{id}/place")]
+        [HttpPost("{auctionId}/place")]
         public async Task<IActionResult> PlaceBid(int auctionId, [FromBody] BidDto bidDto)
         {
             try
@@ -111,11 +111,18 @@ namespace Backend.Controllers
                     return BadRequest("Bid amount must be higher than the current highest bid.");
                 }
 
+                var bidderIdClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "UserID");
+                if (bidderIdClaim == null)
+                {
+                    return Unauthorized("User not authenticated.");
+                }
+                var bidderId = int.Parse(bidderIdClaim.Value);
+
                 // Create a new bid
                 var newBid = new Bid
                 {
                     AuctionID = auctionId,
-                    BidderID = bidDto.BidderID, // Use the BidderID from the DTO
+                    BidderID = bidderId, 
                     BidAmount = bidDto.BidAmount,
                     BidTime = DateTime.Now
                 };
